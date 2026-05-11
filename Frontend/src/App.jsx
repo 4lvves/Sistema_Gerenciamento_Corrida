@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useState } from "react";
 import RaceCard from "./components/RaceCard";
 import ParticipantCard from "./components/ParticipantCard";
 
@@ -91,13 +90,6 @@ function App() {
     participant={participant}
   />
 ))}
-        >
-          <h3>{participant.nome}</h3>
-          <p>Idade: {participant.idade}</p>
-          <p>Categoria: {participant.categoria}</p>
-          <p>Status: {participant.statusInscricao}</p>
-        </div>
-      ))}
 
       <h2>Nova Inscrição</h2>
 
