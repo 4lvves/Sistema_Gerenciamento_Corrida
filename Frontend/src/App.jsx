@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { useState } from "react";
+import RaceCard from "./components/RaceCard";
+import ParticipantCard from "./components/ParticipantCard";
 
 const races = [
   {
@@ -77,31 +80,17 @@ function App() {
       <h2>Corridas</h2>
 
       {races.map((race) => (
-        <div
-          key={race.id}
-          style={{
-            border: "1px solid #ccc",
-            padding: "10px",
-            marginBottom: "10px"
-          }}
-        >
-          <h3>{race.nome}</h3>
-          <p>Local: {race.local}</p>
-          <p>Data: {race.data}</p>
-          <p>Categoria: {race.categoria}</p>
-        </div>
-      ))}
+  <RaceCard key={race.id} race={race} />
+))}
 
       <h2>Participantes</h2>
 
       {participants.map((participant) => (
-        <div
-          key={participant.id}
-          style={{
-            border: "1px solid #ccc",
-            padding: "10px",
-            marginBottom: "10px"
-          }}
+  <ParticipantCard
+    key={participant.id}
+    participant={participant}
+  />
+))}
         >
           <h3>{participant.nome}</h3>
           <p>Idade: {participant.idade}</p>
